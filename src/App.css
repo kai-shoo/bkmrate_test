@@ -1,0 +1,79 @@
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+html {
+  --c1: #f7d2a1;
+  --c2: #2F4858; 
+  --s: 150px;    
+  
+  --_g: 
+     var(--c1) 0%  5% ,var(--c2) 6%  15%,var(--c1) 16% 25%,var(--c2) 26% 35%,var(--c1) 36% 45%,
+     var(--c2) 46% 55%,var(--c1) 56% 65%,var(--c2) 66% 75%,var(--c1) 76% 85%,var(--c2) 86% 95%,
+     #0000 96%;
+  background:
+    radial-gradient(50% 50% at 100% 0,var(--_g)),
+    radial-gradient(50% 50% at 0 100%,var(--_g)),
+    radial-gradient(50% 50%,var(--_g)),
+    radial-gradient(50% 50%,var(--_g)) calc(var(--s)/2) calc(var(--s)/2)
+    var(--c1);
+  background-size: var(--s) var(--s);
+}
+
+form {
+  display: grid;
+  grid-gap: 75px;
+
+  padding: 100px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.09),
+    0 4px 2px rgba(0, 0, 0, 0.09),
+    0 8px 4px rgba(0, 0, 0, 0.09),
+    0 16px 8px rgba(0, 0, 0, 0.09),
+    0 32px 16px rgba(0, 0, 0, 0.09);
+}
+
+input {
+  background-color: white;
+  height: 40px;
+  width: 400px;
+  font-size: 36px;
+  padding: 20px;
+  color: #2F4858;
+  outline-color: #2F4858;
+  border-color: transparent;
+  border-radius: 999px;
+}
+
+button[type="submit"] {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  background-color: #2F4858;
+  color: white;
+  min-width: 300px;
+  font-size: 36px;
+  border-radius: 999px;
+}
+
+span {
+  position: absolute;
+  font-size: 24px;
+  color: #E30001;
+  bottom: -5px;
+  transform: translateY(100%);
+}
+
+label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 32px;
+  color: white;
+}
