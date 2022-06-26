@@ -30,7 +30,7 @@ function App() {
     return (event: { target: HTMLInputElement }) => {
       if (touchedFields[name]) {
         const validationResult = valSchema[name]?.validate(event.target.value);
-        if (validationResult) setErrors({ ...errors, [name]: validationResult });
+        setErrors({ ...errors, [name]: validationResult });
       }
       setForm({ ...formValues, [name]: event.target.value });
     }
@@ -46,6 +46,7 @@ function App() {
     const validationResult = valSchema[name]?.validate(event.target.value);
     if (validationResult) setErrors({ ...errors, [name]: validationResult });
   }
+
 
 
   return (
