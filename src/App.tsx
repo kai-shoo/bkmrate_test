@@ -22,9 +22,7 @@ const validateSchema = (valObj: {[Key in StateKeys]: string}): {[key in StateKey
 }
 
 function App() {
-  const [formValues, setForm] = useState(initialState);
-  const [errors, setErrors] = useState(initialState);
-  const [touchedFields, setTouched] = useState(initialTouched);
+
 
   const handleChange = (name:  StateKeys) => {
     return (event: { target: HTMLInputElement }) => {
